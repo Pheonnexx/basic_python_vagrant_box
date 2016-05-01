@@ -17,6 +17,8 @@ Vagrant.configure(2) do |config|
   config.ssh.forward_agent = true
   config.vm.network "forwarded_port", guest: 8000, host: 8000
 
+  config.vm.synced_folder "/Users/hpwork/Desktop/personal_code/character_sheet_app", "/vagrant/character_sheet_app"
+
   config.vm.define "character_sheets" do |v|
     v.vm.host_name = "character-sheets"
     v.vm.provider :virtualbox do |vb|

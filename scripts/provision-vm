@@ -17,9 +17,6 @@ make configure
 ./configure --prefix=/usr
 sudo make install
 
-#echo "Installing python pip"
-#yum -y install python-pip
-
 # enable Red Hat Software Collections (SCL) for the latest python and postgresql and more
 echo "Enabling Red Hat Software Collections (SCL) repository..."
 yum -y -q install centos-release-SCL
@@ -42,3 +39,15 @@ yum install -y psmisc
 echo "Install atom"
 wget https://github.com/atom/atom/releases/download/v1.8.0-beta1/atom.x86_64.rpm
 yum -y localinstall atom.x86_64.rpm
+
+echo "Creating app directory"
+mkdir -p applications
+sudo chown vagrant applications
+
+if [[ ! -d "vagrant/applications" ]]; then
+    git clone git@github.com:Pheonnexx/character_sheets_api.git vagrant/applications
+
+    chown -R chown vagrant /var/applications
+
+    #su - vagrant -c "source /usr/local/bin/virtualenvwrapper.sh && mkvirtualenv some-env && workon some-env && pip install -r /home/$local_user/app/requirements.txt"
+fi

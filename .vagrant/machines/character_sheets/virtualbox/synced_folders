@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/hpwork/Desktop/personal_code/centos_vagrant_character_shts","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant/character_sheet_app":{"guestpath":"/vagrant/character_sheet_app","hostpath":"/Users/hpwork/Desktop/personal_code/character_sheet_app","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/hpwork/Desktop/personal_code/centos_vagrant_character_shts","disabled":false,"__vagrantfile":true}}}
